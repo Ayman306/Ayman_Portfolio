@@ -14,9 +14,20 @@ import { ApiService } from '../service/api.service';
 })
 export class PageComponent {
   constructor(private apiService: ApiService) {}
+  jokeApiSub: any;
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.apiService.gimmeJoke().subscribe((res) => console.log(res));
+    this.jokeApiSub = this.apiService
+      .gimmeJoke()
+      .subscribe((res) => console.log(res));
+  }
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    console.log(this.jokeApiSub);
+
+    this.jokeApiSub.unsubscribe();
+    console.log(this.jokeApiSub);
   }
 }

@@ -9,4 +9,8 @@ export class ApiService {
   gimmeJoke(): Observable<any> {
     return this.http.get('https://api.chucknorris.io/jokes/random');
   }
+
+  getAnimeFacts(): Observable<any> {
+    return this.http.get('https://nekos.best/api/v2/neko');
+  }
 }

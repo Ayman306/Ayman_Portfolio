@@ -13,9 +13,8 @@ export default [
       import('./about/about.component').then((c) => c.AboutComponent),
   },
   {
-    path: 'projects',
-    loadComponent: () =>
-      import('./projects/projects.component').then((c) => c.ProjectsComponent),
+    path: 'project',
+    loadChildren: () => import('../project/project.route'),
   },
   {
     path: 'contact',
