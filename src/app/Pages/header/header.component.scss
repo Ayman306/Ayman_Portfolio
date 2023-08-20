@@ -1,0 +1,20 @@
+.main-container {
+  nav {
+    background-color: purple;
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        padding: 10px;
+        cursor: pointer;
+        background-color: purple;
+        color: white;
+        &:hover {
+          color: purple;
+          background-color: white;
+          transition: 0.5s ease-in;
+        }
+      }
+    }
+  }
+}
