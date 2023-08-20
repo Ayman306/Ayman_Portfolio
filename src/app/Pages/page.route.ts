@@ -21,6 +21,11 @@ export default [
     component: ContactComponent,
   },
   {
+    path: 'resume',
+    loadComponent: () =>
+      import('./resume/resume.component').then((c) => c.ResumeComponent),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',

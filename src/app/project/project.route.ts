@@ -4,10 +4,7 @@ import { AllProjectComponent } from './all-project.component';
 export default [
   {
     path: 'AnimeProjects',
-    loadComponent: () =>
-      import('./animeProjects/animeProjects.component').then(
-        (c) => c.AnimeProjects
-      ),
+    loadChildren: () => import('./animeProjects/animeProject.route'),
   },
   {
     path: '',
