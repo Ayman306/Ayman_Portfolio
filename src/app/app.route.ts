@@ -5,7 +5,10 @@ import { ApiService } from './service/api.service';
 export const App_Route: Routes = [
   {
     path: '',
-    component: PageComponent,
     loadChildren: () => import('./Pages/page.route'),
+  },
+  {
+    path: 'project',
+    loadChildren: () => import('./project/project.route'),
   },
 ];

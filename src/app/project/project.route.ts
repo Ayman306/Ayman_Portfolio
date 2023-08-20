@@ -3,10 +3,10 @@ import { AllProjectComponent } from './all-project.component';
 
 export default [
   {
-    path: 'AnimeFact',
+    path: 'AnimeProjects',
     loadComponent: () =>
-      import('./random-anime-fact/random-anime-fact.component').then(
-        (c) => c.RandomAnimeFactComponent
+      import('./animeProjects/animeProjects.component').then(
+        (c) => c.AnimeProjects
       ),
   },
   {
