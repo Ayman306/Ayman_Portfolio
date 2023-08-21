@@ -1,10 +1,25 @@
-<div class="main-container">
-  <nav>
-    <ul>
-      <li [routerLink]="['/home']">Home</li>
-      <li [routerLink]="['/project']">Projects</li>
-      <li [routerLink]="['/about']">About</li>
-      <li [routerLink]="['/contact']">Contact</li>
-    </ul>
-  </nav>
+<div class="container">
+  <div class="container_sub d-flex">
+    <div class="logo" [routerLink]="['/home']">
+      <img src="assets/logo.png" alt="" srcset="" />
+    </div>
+    <nav class="displayLap">
+      <ul>
+        <li [routerLink]="['/home']">Home</li>
+        <li [routerLink]="['/about']">About</li>
+        <li [routerLink]="['/project']">My Work</li>
+        <li [routerLink]="['/contact']">Connect</li>
+      </ul>
+    </nav>
+    <a href="mailto:aymanuddin.se@gmail.com" class="mail displayLap">
+      <button class="btn">aymanuddin.se@gmail.com</button></a
+    >
+    <!-- mobile menu -->
+    <div class="menu d-none">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!--- end of mobile menu-->
+  </div>
 </div>

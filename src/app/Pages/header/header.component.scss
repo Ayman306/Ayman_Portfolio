@@ -1,20 +1,91 @@
-.main-container {
-  nav {
-    background-color: purple;
-    ul {
-      list-style: none;
+.container {
+  &_sub {
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      width: 150px;
+      height: 150px;
+      cursor: pointer;
+      img {
+        width: inherit;
+        height: inherit;
+      }
+    }
+    @media (max-width: 768px) {
+      .logo {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    nav {
       display: flex;
-      li {
-        padding: 10px;
-        cursor: pointer;
-        background-color: purple;
-        color: white;
-        &:hover {
-          color: purple;
-          background-color: white;
-          transition: 0.5s ease-in;
+      align-items: center;
+
+      ul {
+        display: flex;
+        margin: 0;
+
+        li {
+          padding: 0px 30px;
+          cursor: pointer;
+          transition: 0.5s;
+          font-size: 20px;
+          font-weight: 300;
+          &:hover {
+            transform: scale(1.1);
+            color: rgb(0, 0, 70);
+          }
         }
       }
     }
+
+    .mail {
+      margin-left: 20px;
+      text-decoration: none;
+      width: auto;
+      align-items: center;
+      display: flex;
+
+      .btn {
+        color: white;
+        text-decoration: none;
+        background-color: rgb(0, 0, 0);
+        border-radius: 20px;
+        padding: 20px;
+        transition: 0.5s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .menu {
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      span {
+        margin-top: 6px;
+        width: 30px;
+        height: 3px;
+        background-color: black;
+      }
+    }
+  }
+}
+/* Styles for screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .menu {
+    margin: auto 0;
+    display: block !important;
+    span {
+      display: block;
+    }
+  }
+  .displayLap {
+    display: none !important;
   }
 }

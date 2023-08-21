@@ -8,6 +8,7 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   AttackOnTitan_Base_Url = 'https://api.attackontitanapi.com';
+  FruitsFact_Base_Url = 'https://www.fruityvice.com/api/';
   gimmeJoke(): Observable<any> {
     return this.http.get('https://api.chucknorris.io/jokes/random');
   }
