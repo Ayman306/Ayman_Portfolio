@@ -1,5 +1,7 @@
+@import url("../../../assets/styles/animations.scss");
 .main {
   width: 100%;
+  height: 70vh;
   &_sub {
     width: 80%;
     height: 100%;
@@ -56,13 +58,18 @@
     }
   }
 }
+.scrollDown {
+  height: 250px;
+  display: flex;
+  align-items: center;
+}
 @media (max-width: 768px) {
   .main {
     &_sub {
       display: block;
-      width: 100%;
       text-align: center;
       .content {
+        margin-top: auto;
         .header {
           justify-content: center;
           font-size: 45px;
@@ -82,22 +89,9 @@
         .sub_header {
           width: auto;
           margin: 0;
-          padding: 5px
+          padding: 5px;
         }
       }
     }
   }
-}
-.fadeAnimation{
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-@keyframes fadeInAnimation {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-   }
 }

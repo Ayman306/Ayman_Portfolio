@@ -1,1 +1,104 @@
-<p>about works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div id="scrollspy" class="sticky-top">
+        <ul
+          mdbScrollspy="scrollspy"
+          class="nav flex-column nav-pills menu-sidebar"
+        >
+          <li class="nav-item">
+            <a mdbScrollspyLink="example-1" class="nav-link">
+              <h2>ABOUT ME</h2>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a mdbScrollspyLink="example-2" class="nav-link"
+              ><h2>EXPERIENCE</h2></a
+            >
+          </li>
+          <li class="nav-item">
+            <a mdbScrollspyLink="example-4" class="nav-link">
+              <h2>PROJECTS</h2>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="scrollspy-example scrollspy-container">
+        <section mdbScrollspyElement="scrollspy" id="example-1">
+          <div class="about">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis
+              labore magnam earum fugit dolorem minima, suscipit assumenda optio
+              magni enim incidunt expedita sit eveniet quasi dicta, vel cum odio
+              quam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Iure, quibusdam! Non, architecto officiis provident repudiandae
+              voluptatem debitis quod aliquid. Obcaecati repudiandae sed
+              sapiente consequatur cum iusto quibusdam voluptatem ratione ut!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+              quis veniam quaerat, repellendus asperiores eius ipsa nulla
+              dolorum distinctio excepturi esse laborum. Explicabo dolor quos
+              repudiandae illo sint placeat quas! Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Dolores exercitationem voluptatum id
+              cupiditate vel pariatur officiis blanditiis corporis cumque
+              libero! Delectus dolorem quisquam provident modi placeat eligendi
+              rerum earum magnam.
+            </p>
+          </div>
+        </section>
+        <section mdbScrollspyElement="scrollspy" id="example-2">
+          <a
+            class="main_sub"
+            id="about"
+            [href]="item.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="content"
+            *ngFor="let item of exp"
+          >
+            <div class="content_main">
+              <h2>{{ item.title }}</h2>
+              <p>
+                {{ item.desc }}
+              </p>
+              <div class="tech">
+                <p *ngFor="let tech of item.tech">{{ tech }}</p>
+              </div>
+            </div>
+          </a>
+          <!-- <a
+            class="resume"
+            [routerLink]="['/resume']"
+            routerLinkActive="router-link-active"
+          >
+            View Full Resume
+          </a> -->
+        </section>
+        <section mdbScrollspyElement="scrollspy" id="example-4">
+          <a
+            class="main_sub"
+            id="about"
+            [href]="item.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="content"
+            *ngFor="let item of project"
+          >
+            <div class="content_main">
+              <h2>{{ item.title }}</h2>
+              <p>
+                {{ item.desc }}
+              </p>
+              <div class="tech">
+                <p *ngFor="let tech of item.tech">{{ tech }}</p>
+              </div>
+            </div>
+          </a>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

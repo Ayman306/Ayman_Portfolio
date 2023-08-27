@@ -1,0 +1,105 @@
+@import url("../../../assets/styles/animations.scss");
+.container {
+  margin: 150px auto;
+}
+.scrollspy-example {
+  position: relative;
+  height: 500px;
+  overflow: auto;
+  section {
+    margin: 2rem 0px;
+    a {
+      margin: 5rem;
+      color: black;
+    }
+    .content_main {
+      opacity: 0.5;
+      width: 60%;
+      padding: 30px;
+      border: 0.5px solid beige;
+      transition: transform 0.07s ease-out;
+      margin: auto;
+      display: block;
+      &:hover {
+        opacity: 1;
+        background-color: #fdfdfd;
+        box-shadow: 0px 1px 1px 1px beige;
+        transform: translate(-10px, -10px);
+      }
+      .tech {
+        display: flex;
+        flex-wrap: wrap;
+        p {
+          padding: 3px 15px;
+          margin: 5px;
+          border-radius: 10px;
+          background-color: rgb(243, 243, 255);
+          color: #010046;
+          box-shadow: 0px 0px 2px 0px black;
+          font-weight: 500;
+          &:hove {
+            box-shadow: 1px 1px #010046;
+          }
+        }
+      }
+    }
+  }
+}
+.nav-item {
+  margin: 30px 0px;
+}
+.nav-link {
+  font-weight: 400;
+  color: black;
+  h2 {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+  }
+}
+.nav-link.active {
+  // display: block;
+
+  font-size: 40px;
+  font-weight: 600;
+  position: relative;
+  background-color: #fcfcfc;
+  color: #010046;
+  padding: 10px 40px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 0px 2px beige;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    bottom: 0;
+    left: 40%;
+    background-color: #010046;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    animation: underline 3s infinite ease-in-out;
+  }
+
+  @keyframes underline {
+    0%,
+    100% {
+      transform: scaleX(0);
+      transform-origin: bottom left;
+    }
+    50% {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .scrollspy-example {
+    section {
+      .content_main {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+  }
+}
