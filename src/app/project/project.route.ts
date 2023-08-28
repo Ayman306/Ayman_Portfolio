@@ -7,6 +7,10 @@ export default [
     loadChildren: () => import('./animeProjects/animeProject.route'),
   },
   {
+    path:'Pexels',
+    loadComponent:()=> import('./pexels/pexels.component').then(c=>c.PexelsComponent)
+  },
+  {
     path: '',
     component: AllProjectComponent,
   },

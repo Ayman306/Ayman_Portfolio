@@ -1,6 +1,6 @@
-<app-header></app-header>
+<app-header *ngIf="hideHeader"></app-header>
 <router-outlet></router-outlet>
-<div>
+<!-- <div>
   <span *ngIf="update">There is an update</span>
-</div>
+</div> -->
 <app-footer></app-footer>

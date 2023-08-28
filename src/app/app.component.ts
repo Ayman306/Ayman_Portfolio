@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { HeaderComponent } from './Pages/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './Pages/footer/footer.component';
@@ -13,11 +13,15 @@ import { FooterComponent } from './Pages/footer/footer.component';
 })
 export class AppComponent implements OnInit {
   title = 'Ayman_portfolio';
-  constructor() {}
-  update: boolean = false;
+  constructor(private route: ActivatedRoute) {}
+  hideHeader = false;
+
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     console.log('ngOnInit');
+    this.route.paramMap.subscribe(params => {
+      const routeParam = params.get('routeParam'); // Replace 'routeParam' with your actual route parameter name
+      // Check if the routeParam matches the value you want to hide the header for
+      this.hideHeader = routeParam === 'Pexels'; // Replace 'Pexels' with your desired value
+    });
   }
 }
