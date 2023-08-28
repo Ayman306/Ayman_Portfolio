@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 
 @Component({
@@ -10,12 +10,8 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
-  constructor() {}
-  ngOnInit(): void {}
-  screenWidth = window.innerWidth;
-  showMenu = false;
-  toggleNavbar() {
-    this.showMenu = !this.showMenu;
+export class HeaderComponent implements OnInit {
+  constructor(private route: ActivatedRoute) {}
+  ngOnInit() {
   }
 }
