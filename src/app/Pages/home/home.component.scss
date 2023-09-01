@@ -1,11 +1,12 @@
 @import url("../../../assets/styles/animations.scss");
+
 .main {
-  // background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(250, 250, 250, 0.3)),url("https://images.pexels.com/photos/390392/pexels-photo-390392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   width: 100%;
   height: 75vh;
+
   &_sub {
     width: 80%;
     height: 100%;
@@ -14,19 +15,20 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+
     .content {
       margin-top: 30px;
+
       .header {
         font-size: 70px;
-        // font-weight: 900;
         text-align: right;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
         color: black;
         line-height: 100px;
         letter-spacing: 5px;
-        // text-transform: uppercase;
+
         .mailIcon {
           border-radius: 50%;
           background: rgb(0, 94, 255);
@@ -39,10 +41,12 @@
           margin: 5px;
           margin-top: 13px;
           transition: 0.5s;
+
           &:hover {
             background-color: black;
             transform: scale(1.1);
           }
+
           img {
             width: 30px;
             height: 30px;
@@ -50,123 +54,135 @@
         }
       }
     }
+
     .content_sub {
       .sub_header {
         margin-left: 20px;
         padding-top: 0;
-        // font-size: 16px;
-        // font-weight: 600;
-        display: block;
         width: 400px;
       }
     }
   }
 }
+
 .scrollDown {
   height: 250px;
   display: flex;
   align-items: center;
 }
-.about{
-  .aboutmain{
+
+.about {
+  .aboutmain {
     padding: 20px;
-      p{
-        width: 50%;
-      }
+
+    p {
+      width: 50%;
+    }
   }
-  margin-bottom: 8rem ;
+  margin-bottom: 8rem;
 }
-.stack{
+
+.stack {
   background-color: rgb(0 18 108);
   color: white;
-  &_main{
+
+  &_main {
     padding: 5rem;
+
     @media (max-width: 768px) {
-      &{
-        padding: 0;
-      }
+      padding: 0;
     }
-    .head{
-       @media (max-width:1024px) {
-            display: block !important;
-          }
-      .image{
-        img{
-          @media (max-width:1024px) {
+
+    .head {
+      @media (max-width: 1024px) {
+        display: block !important;
+      }
+
+      .image {
+        img {
+          @media (max-width: 1024px) {
             width: 100% !important;
           }
         }
       }
-      p{
+
+      p {
         color: white;
         padding: 20px;
-        @media (max-width:1024px) {
+
+        @media (max-width: 1024px) {
           width: 100% !important;
         }
       }
     }
-    .work{
-      .work_main{
+
+    .work {
+      .work_main {
         color: rgb(0 18 108);
-         @media (max-width:768px) {
-          &{
-            display: block !important;
-            .cards{
-              margin-top: 30px;
-            }
-          }
+
+        @media (max-width: 768px) {
+          display: block !important;
+          margin-top: 30px;
         }
-        .cards{
+
+        .cards {
           background-color: white;
           margin: 0px 30px;
           border-radius: 5px;
- @media (max-width:768px) {
 
-              margin-top: 30px;
+          @media (max-width: 768px) {
+            margin-top: 30px;
+          }
 
-        }
-          .icon{
-            i{
+          .icon {
+            i {
               font-size: 30px;
               padding: 20px;
             }
-            h1{
+
+            h1 {
               padding: 20px;
             }
-            p{
+
+            p {
               padding: 10px;
             }
           }
         }
       }
     }
-    .milstone{
-      ul{
-        li{
-           @media (max-width:768px) {
-             display: block !important;
-        }
+
+    .milstone {
+      ul {
+        li {
+          @media (max-width: 768px) {
+            display: block !important;
+          }
         }
       }
     }
   }
-
 }
+
 @media (max-width: 768px) {
   .main {
     &_sub {
       display: block;
       text-align: center;
+
       .content {
         margin-top: auto;
+
         .header {
           justify-content: center;
           font-size: 45px;
           text-align: center;
+
           a {
             margin-top: 5px;
             width: 40px;
             height: 40px;
+
             img {
               width: 20px;
               height: 20px;
@@ -174,6 +190,7 @@
           }
         }
       }
+
       .content_sub {
         .sub_header {
           width: auto;
@@ -183,12 +200,14 @@
       }
     }
   }
-  .about{
-  .aboutmain{
-    padding: 20px;
-      p{
+
+  .about {
+    .aboutmain {
+      padding: 20px;
+
+      p {
         width: 100%;
       }
+    }
   }
-}
 }
