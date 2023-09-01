@@ -4,12 +4,13 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { HeaderComponent } from './Pages/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './Pages/footer/footer.component';
+import { LayoutComponent } from './layouts/layout/layout.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule, HeaderComponent, FontAwesomeModule,FooterComponent],
+  imports: [CommonModule, RouterModule, HeaderComponent, FontAwesomeModule,FooterComponent,LayoutComponent],
 })
 export class AppComponent implements OnInit {
   title = 'Ayman_portfolio';

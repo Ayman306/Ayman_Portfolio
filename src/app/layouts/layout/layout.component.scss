@@ -1,0 +1,12 @@
+.layout{
+  padding: 0px 100px;
+    display: block;
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  .layout{
+    padding: 0;
+  }
+}

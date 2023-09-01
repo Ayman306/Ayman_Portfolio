@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/scss/bootstrap";
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200&family=Marcellus&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +11,9 @@ body {
   font-family: "Marcellus", sans-serif;
   overflow-x: hidden !important;;
 }
-h1 {
-  font-family: "Kanit", serif;
+h1,h2 {
+  // font-family: "Kanit", serif;
+  font-family: 'Climate Crisis', cursive;
 }
 html {
   scroll-behavior: smooth;
