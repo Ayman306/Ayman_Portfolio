@@ -13,16 +13,4 @@ import { FooterComponent } from '../footer/footer.component';
 })
 export class HomeComponent {
   constructor() {}
-  scroll() {
-    const aboutLink = document.getElementById('about-link');
-    if (aboutLink) {
-      aboutLink.addEventListener('click', function (event) {
-        event.preventDefault();
-        const aboutSection = document.getElementById('about');
-        if (aboutSection) {
-          aboutSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    }
-  }
 }
